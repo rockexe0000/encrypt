@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: "local"
+  application:
+    name: encrypt
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    root: INFO
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+
+
+---
+#spring:
+#  config:
+#    activate:
+#      on-profile: dev
+#
+#gcp:
+#  identity:
+#    apiKey:
+#    authDomain:
